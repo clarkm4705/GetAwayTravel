@@ -1,0 +1,97 @@
+body {
+    font-family: arial, verdana, sans-serif;
+    background-image: url(./nature-6799071_1280.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+a:link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited {
+    color:#ffffff;
+}
+.navbar {
+    background: #005f67;
+    color: #ffffff;
+    margin: -8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbarlinks {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+p.logo {
+    padding-right: 45px;
+    font-weight: bolder;
+    font-size: larger;
+}
+form.navbarsearchform {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.siteheader {
+    text-transform: uppercase;
+    width: 35%;
+    left: 15%;
+    position: relative;
+    padding: 60px 0 30px;
+    color: #ffffff;
+}
+.sitecopy {
+    position: relative;
+    left: 15%;
+    width: 35%;
+    color: #ffffff;
+}
+p.aboutuscopy {
+    color: #ffffff;
+    left: 15%;
+    position: relative;
+}
+.ourteamcopy {
+    color: #ffffff;
+    left: 15%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ourteamcopy h3 {
+    width: 15%;
+}
+.ourteamcopy ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    width: 60%;
+}
+.ourteamcopy li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.staffname {
+    font-weight: bold;
+    padding: 0 0 8px;
+    text-transform: uppercase;
+}
+.stafftitle {
+    font-size: small;
+}
