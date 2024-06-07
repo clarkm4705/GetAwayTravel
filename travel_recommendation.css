@@ -37,7 +37,7 @@ p.logo {
     font-weight: bolder;
     font-size: larger;
 }
-form.navbarsearchform {
+#navbarsearchform {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -94,4 +94,32 @@ p.aboutuscopy {
 }
 .stafftitle {
     font-size: small;
+}
+.contactusform {
+    width: 50%;
+    left: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ffffff;
+    padding: 20px;
+}
+#contactname, #contactemail {
+    display: block;
+    margin: 2px 0 15px;
+    min-width: 250px;
+}
+textarea#contactmessage {
+    display: block;
+    margin: 2px 0 15px;
+    min-width: 500px;
+    min-height: 200px;
+}
+button#ContactButton {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #11818a;
+    color: #ffffff;
+    font-weight: bolder;
 }
