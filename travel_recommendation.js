@@ -4,13 +4,14 @@ function travelSearch(event) {
     .then(response => response.json())
     .then(data => {
         const recommentationInfo = document.getElementById('recommendationInfo');
+        console.log(JSON.stringify(data));
         recommendationInfo.innerHTML = `...`;
         
     })
     .catch(error => {
         console.error('Error fetching recommendations', error);
         const recommendationInfo = document.getElementById('recommendationInfo');
-        recommendationInfo.innerHTML = `<p>Failed to fetch recommendations. Please try again.</p>`;
+        recommendationInfo.innerHTML = `<p>Failed to fetch recommendations. Please try again or <a href = "./contact.html">Contact Us</a> for help.</p>`;
 
     });
 }  
