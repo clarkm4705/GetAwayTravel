@@ -5,7 +5,7 @@ function travelSearch(event) {
     .then(data => {
         const recommentationInfo = document.getElementById('recommendationInfo');
         console.log(JSON.stringify(data));
-        recommendationInfo.innerHTML = `...`;
+        recommendationInfo.innerHTML = `<div><p>JSON results</p></div>`;
         
     })
     .catch(error => {
