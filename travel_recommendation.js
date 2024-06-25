@@ -1,7 +1,8 @@
 function travelSearch(event) {
     event.preventDefault();
-    const searchString = document.getElementById('SearchBox');
-    console.log(searchString.toLowerCase());
+    const searchString = document.getElementById('SearchBox').value;
+    console.log(searchString);
+    console.log(`searchString.toLowerCase()`);
     const apiUrl = 'https://clarkm4705.github.io/GetAwayTravel/travel_recommendation_api.json';
     fetch(apiUrl)
         .then(response => {
