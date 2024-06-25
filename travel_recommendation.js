@@ -13,7 +13,7 @@ function travelSearch(event) {
         .then(data => {
             const recommendationInfo = document.getElementById('travelsearchresults');
             console.log(JSON.stringify(data));
-            if (searchString == country || searchString == countries) {
+            if (searchString == "country" || searchString == "countries") {
                 for (const countries of data.countries) {
                 const countryName = document.createElement("h3");
                 countryName.appendChild(document.createElement("strong")).textContent = country.name;
