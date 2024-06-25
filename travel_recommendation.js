@@ -33,7 +33,7 @@ function travelSearch(event) {
         .catch(error => {
             console.error('Error fetching recommendations', error);
             const recommendationInfo = document.getElementById('travelsearchresults');
-            recommendationInfo.innerHTML = `<p>Failed to fetch recommendations. Please try again or <a href = "./contact.html">Contact Us</a> for help.</p>`;
+            recommendationInfo.innerHTML = `<p>Failed to fetch recommendations.</p><p>Please try again or <a href = "./contact.html">Contact Us</a> for help.</p>`;
 
     });
 }  
