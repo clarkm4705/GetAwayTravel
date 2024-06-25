@@ -13,16 +13,19 @@ function travelSearch(event) {
         .then(data => {
             const recommendationInfo = document.getElementById('travelsearchresults');
             console.log(JSON.stringify(data));
-            if (searchString === country || searchString === countries) {
-                var myData = data[0];
-                console.log(myData);
-            } else if (searchString === temple || searchString === temples) {
+            if (searchString == country || searchString == countries) {
+                for (const countries of data.countries) {
+                const countryName = document.createElement("h3");
+                countryName.appendChild(document.createElement("strong")).textContent = country.name;
+                recommendationInfo.appendChild(countryName);
+                }
+           /* } else if (searchString === temple || searchString === temples) {
                 var myData = data[1];
                 console.log(myData);
             } else if (searchString === beach || searchString === beaches) {
                 var myData = data[2];
                 console.log(myData);
-            } else {
+           */ } else {
                 console.log("No results");
             }
             
