@@ -130,7 +130,11 @@ button#ContactButton {
     color: #cccccc;
     padding: 2em;
     margin-right: 2em;
+    visibility: hidden;
 }
 #travelsearchresults > p + p {
     padding-bottom: 2em;
+}
+.visible {
+    visibility: visible!important;
 }
