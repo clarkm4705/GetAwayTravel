@@ -2,7 +2,7 @@ function travelSearch(event) {
     event.preventDefault();
     const searchString = document.getElementById('SearchBox').value;
     console.log(searchString);
-    console.log(`searchString.toLowerCase()`);
+    console.log(searchString.toLowerCase());
     const apiUrl = 'https://clarkm4705.github.io/GetAwayTravel/travel_recommendation_api.json';
     fetch(apiUrl)
         .then(response => {
@@ -21,4 +21,10 @@ function travelSearch(event) {
 
     });
 }  
-document.getElementById('SearchButton').addEventListener('submit', travelSearch);
+
+function clearSearch() {
+    document.getElementById('SearchBox').value = "";
+    document.getElementById('travelsearchresults').innerHTML = "";
+}
+document.getElementById('SearchButton').addEventListener('click', travelSearch);
+document.getElementById('ResetButton').addEventListener('click', clearSearch);
