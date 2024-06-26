@@ -12,8 +12,9 @@ function travelSearch(event) {
         })
         .then(data => {
             const recommendationInfo = document.getElementById('travelsearchresults');
-            console.log(JSON.stringify(data));
-            if (searchString == "country") {
+            /*console.log(JSON.stringify(data));*/
+            if (searchString === "country") {
+                console.log("Countries block");
                 for (const countries of data.countries) {
                 const country = document.createElement("div");
                 const countryName = document.createElement("h3");
@@ -22,15 +23,17 @@ function travelSearch(event) {
                 recommendationInfo.appendChild(country);
                 }
             } else if (searchString === "temple") {
+                console.log("Temples block");
                 for (const temples of data.temples) {
                 const temple = document.createElement("div");
                 const templeName = document.createElement("h3");
                 templeName.textContent = temples.name;
                 temple.appendChild(templeName);
-                recommendationInfo.appendChild(country);
+                recommendationInfo.appendChild(temple);
                 }
-            } else if (searchString == "beach" || searchString == "beaches") {
+            } else if (searchString === "beach" || searchString === "beaches") {
                 for (const beaches of data.beaches) {
+                console.log("beaches block");
                 const beach = document.createElement("div");
                 const beachName = document.createElement("h3");
                 beachName.textContent = beaches.name
