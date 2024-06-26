@@ -66,7 +66,7 @@ function travelSearch(event) {
                     const beachImage = document.createElement("img");
                     const beachDescription = document.createElement("p");
                     beachName.textContent = beaches.name;
-                    beachImage.src = beaches.imageURL;
+                    beachImage.src = beaches.imageUrl;
                     beachImage.className = "search-img";
                     beachDescription.textContent = beaches.description;
                     beach.className = "beach-div";
