@@ -138,3 +138,12 @@ button#ContactButton {
 .visible {
     visibility: visible!important;
 }
+.search-img {
+    width: 100%;
+}
+.country-div, .temple-div, .beach-div {
+    padding-bottom: 2em;
+}
+.city-div {
+    padding: 0 0 1em 1em;
+}
