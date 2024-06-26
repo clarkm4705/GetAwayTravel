@@ -30,7 +30,7 @@ function travelSearch(event) {
                 recommendationInfo.appendChild(country);
                 }
             } else if (searchString == "beach" || searchString == "beaches") {
-                for (const beaches of data.beaches( {
+                for (const beaches of data.beaches) {
                 const beach = document.createElement("div");
                 const beachName = document.createElement("h3");
                 beachName.textContent = beaches.name
