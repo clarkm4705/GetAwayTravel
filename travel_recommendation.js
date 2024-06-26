@@ -16,7 +16,7 @@ function travelSearch(event) {
             if (searchString == "country" || searchString == "countries") {
                 for (const countries of data.countries) {
                 const countryName = document.createElement("h3");
-                countryName.appendChild(document.createElement("strong")).textContent = country.name;
+                countryName.appendChild(document.createElement("strong")).textContent = countries.name;
                 recommendationInfo.appendChild(countryName);
                 }
            /* } else if (searchString === temple || searchString === temples) {
