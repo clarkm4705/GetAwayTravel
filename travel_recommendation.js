@@ -17,20 +17,39 @@ function travelSearch(event) {
             if (searchString === "country" || searchString === "countries") {
                 console.log("Countries block");
                 for (const countries of data.countries) {
-                const country = document.createElement("div");
-                const countryName = document.createElement("h3");
-                countryName.textContent = countries.name;
-                country.appendChild(countryName);
-                recommendationInfo.appendChild(country);
-                recommendationInfo.classList.add("visible");
+                    const country = document.createElement("div");
+                    const countryName = document.createElement("h3");
+                    countryName.textContent = countries.name;
+                    country.appendChild(countryName);
+                        for (const cities of countries.cities) {
+                            const city = document.createElement("div");
+                            const cityName = document.createElement("h4");
+                            const cityImage = document.createElement("img");
+                            const cityDescription = document.createElement("p");
+                            cityName.textContent = cities.name;
+                            cityImage.src = cities.imageUrl;
+                            cityDescription.textContent = cities.description;
+                            city.appendChild(cityName);
+                            city.appendChild(cityImage);
+                            city.appendChild(cityDescription);
+                            country.appendChild(city);
+                        }
+                    recommendationInfo.appendChild(country);
+                    recommendationInfo.classList.add("visible");
                 }
             } else if (searchString === "temple" || searchString === "temples") {
                 console.log("Temples block");
                 for (const temples of data.temples) {
                 const temple = document.createElement("div");
                 const templeName = document.createElement("h3");
+                const templeImage = document.createElement("img");
+                const templeDescription = document.createElement("p");
                 templeName.textContent = temples.name;
+                templeImage.src = temples.imageUrl;
+                templeDescription.textContent = temples.description;
                 temple.appendChild(templeName);
+                temple.appendChild(templeImage);
+                temple.appendChild(templeDescription);
                 recommendationInfo.appendChild(temple);
                 recommendationInfo.classList.add("visible");
                 }
@@ -39,8 +58,14 @@ function travelSearch(event) {
                 console.log("beaches block");
                 const beach = document.createElement("div");
                 const beachName = document.createElement("h3");
-                beachName.textContent = beaches.name
+                const beachImage = document.createElement("img");
+                const beachDescription = document.createElement("p");
+                beachName.textContent = beaches.name;
+                beachImage.src = beaches.imageURL;
+                beachDescription.textContent = beaches.description;
                 beach.appendChild(beachName);
+                beach.appendChild(beachImage);
+                beach.appendChild(beachDescription);
                 recommendationInfo.appendChild(beach);
                 recommendationInfo.classList.add("visible");
                 }
