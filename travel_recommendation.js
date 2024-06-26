@@ -62,7 +62,8 @@ function travelSearch(event) {
 
 function clearSearch() {
     document.getElementById('SearchBox').value = "";
-    document.getElementById('travelsearchresults').innerHTML = "";
+    const recommendationInfo = document.getElementById('travelsearchresults');
+    recommendationInfo.innerHTML = "";
     recommendationInfo.classList.remove("visible");
 }
 document.getElementById('SearchButton').addEventListener('click', travelSearch);
