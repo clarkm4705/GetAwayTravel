@@ -15,18 +15,31 @@ function travelSearch(event) {
             console.log(JSON.stringify(data));
             if (searchString == "country" || searchString == "countries") {
                 for (const countries of data.countries) {
+                const country = document.createElement("div");
                 const countryName = document.createElement("h3");
-                countryName.appendChild(document.createElement("strong")).textContent = countries.name;
-                recommendationInfo.appendChild(countryName);
+                countryName.textContent = countries.name;
+                country.appendChild(countryName);
+                recommendationInfo.appendChild(country);
                 }
-           /* } else if (searchString === temple || searchString === temples) {
-                var myData = data[1];
-                console.log(myData);
-            } else if (searchString === beach || searchString === beaches) {
-                var myData = data[2];
-                console.log(myData);
-           */ } else {
+            } else if (searchString == "temple" || searchString == "temples") {
+                for (const temples of data.temples) {
+                const temple = document.createElement("div");
+                const templeName = document.createElement("h3");
+                templeName.textContent = temples.name;
+                temple.appendChild(templeName);
+                recommendationInfo.appendChild(country);
+                }
+            } else if (searchString == "beach" || searchString == "beaches") {
+                for (const beaches of data.beaches( {
+                const beach = document.createElement("div");
+                const beachName = document.createElement("h3");
+                beachName.textContent = beaches.name
+                beach.appendChild(beachName);
+                recommendationInfo.appendChild(beach);
+                }
+            } else {
                 console.log("No results");
+                recommendationInfo.innerHTML = `<p>No results found. Try searching for something else.</p>`;
             }
             
         })
