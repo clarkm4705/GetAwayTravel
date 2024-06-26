@@ -13,7 +13,7 @@ function travelSearch(event) {
         .then(data => {
             const recommendationInfo = document.getElementById('travelsearchresults');
             /*console.log(JSON.stringify(data));*/
-            if (searchString === "country") {
+            if (searchString === "country" || searchString === "countries") {
                 console.log("Countries block");
                 for (const countries of data.countries) {
                 const country = document.createElement("div");
@@ -21,8 +21,9 @@ function travelSearch(event) {
                 countryName.textContent = countries.name;
                 country.appendChild(countryName);
                 recommendationInfo.appendChild(country);
+                recommendationInfo.classList.add("visible");
                 }
-            } else if (searchString === "temple") {
+            } else if (searchString === "temple" || searchString === "temples") {
                 console.log("Temples block");
                 for (const temples of data.temples) {
                 const temple = document.createElement("div");
@@ -30,6 +31,7 @@ function travelSearch(event) {
                 templeName.textContent = temples.name;
                 temple.appendChild(templeName);
                 recommendationInfo.appendChild(temple);
+                recommendationInfo.classList.add("visible");
                 }
             } else if (searchString === "beach" || searchString === "beaches") {
                 for (const beaches of data.beaches) {
@@ -39,10 +41,12 @@ function travelSearch(event) {
                 beachName.textContent = beaches.name
                 beach.appendChild(beachName);
                 recommendationInfo.appendChild(beach);
+                recommendationInfo.classList.add("visible");
                 }
             } else {
                 console.log("No results");
                 recommendationInfo.innerHTML = `<p>No results found. Try searching for something else.</p>`;
+                recommendationInfo.classList.add("visible");
             }
             
         })
@@ -58,6 +62,7 @@ function travelSearch(event) {
 function clearSearch() {
     document.getElementById('SearchBox').value = "";
     document.getElementById('travelsearchresults').innerHTML = "";
+    recommendationInfo.classList.remove("visible");
 }
 document.getElementById('SearchButton').addEventListener('click', travelSearch);
 document.getElementById('ResetButton').addEventListener('click', clearSearch);
