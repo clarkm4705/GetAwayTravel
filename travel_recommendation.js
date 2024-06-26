@@ -20,6 +20,7 @@ function travelSearch(event) {
                     const country = document.createElement("div");
                     const countryName = document.createElement("h3");
                     countryName.textContent = countries.name;
+                    country.className = "country-div";
                     country.appendChild(countryName);
                         for (const cities of countries.cities) {
                             const city = document.createElement("div");
@@ -28,7 +29,9 @@ function travelSearch(event) {
                             const cityDescription = document.createElement("p");
                             cityName.textContent = cities.name;
                             cityImage.src = cities.imageUrl;
+                            cityImage.className = "search-img";
                             cityDescription.textContent = cities.description;
+                            city.className = "city-div";
                             city.appendChild(cityName);
                             city.appendChild(cityImage);
                             city.appendChild(cityDescription);
@@ -40,34 +43,38 @@ function travelSearch(event) {
             } else if (searchString === "temple" || searchString === "temples") {
                 console.log("Temples block");
                 for (const temples of data.temples) {
-                const temple = document.createElement("div");
-                const templeName = document.createElement("h3");
-                const templeImage = document.createElement("img");
-                const templeDescription = document.createElement("p");
-                templeName.textContent = temples.name;
-                templeImage.src = temples.imageUrl;
-                templeDescription.textContent = temples.description;
-                temple.appendChild(templeName);
-                temple.appendChild(templeImage);
-                temple.appendChild(templeDescription);
-                recommendationInfo.appendChild(temple);
-                recommendationInfo.classList.add("visible");
+                    const temple = document.createElement("div");
+                    const templeName = document.createElement("h3");
+                    const templeImage = document.createElement("img");
+                    const templeDescription = document.createElement("p");
+                    templeName.textContent = temples.name;
+                    templeImage.src = temples.imageUrl;
+                    templeImage.className = "search-img";
+                    templeDescription.textContent = temples.description;
+                    temple.className = "temple-div";
+                    temple.appendChild(templeName);
+                    temple.appendChild(templeImage);
+                    temple.appendChild(templeDescription);
+                    recommendationInfo.appendChild(temple);
+                    recommendationInfo.classList.add("visible");
                 }
             } else if (searchString === "beach" || searchString === "beaches") {
                 for (const beaches of data.beaches) {
-                console.log("beaches block");
-                const beach = document.createElement("div");
-                const beachName = document.createElement("h3");
-                const beachImage = document.createElement("img");
-                const beachDescription = document.createElement("p");
-                beachName.textContent = beaches.name;
-                beachImage.src = beaches.imageURL;
-                beachDescription.textContent = beaches.description;
-                beach.appendChild(beachName);
-                beach.appendChild(beachImage);
-                beach.appendChild(beachDescription);
-                recommendationInfo.appendChild(beach);
-                recommendationInfo.classList.add("visible");
+                    console.log("beaches block");
+                    const beach = document.createElement("div");
+                    const beachName = document.createElement("h3");
+                    const beachImage = document.createElement("img");
+                    const beachDescription = document.createElement("p");
+                    beachName.textContent = beaches.name;
+                    beachImage.src = beaches.imageURL;
+                    beachImage.className = "search-img";
+                    beachDescription.textContent = beaches.description;
+                    beach.className = "beach-div";
+                    beach.appendChild(beachName);
+                    beach.appendChild(beachImage);
+                    beach.appendChild(beachDescription);
+                    recommendationInfo.appendChild(beach);
+                    recommendationInfo.classList.add("visible");
                 }
             } else {
                 console.log("No results");
