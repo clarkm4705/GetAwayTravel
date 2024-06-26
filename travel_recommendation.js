@@ -13,7 +13,7 @@ function travelSearch(event) {
         .then(data => {
             const recommendationInfo = document.getElementById('travelsearchresults');
             console.log(JSON.stringify(data));
-            if (searchString == "country" || searchString == "countries") {
+            if (searchString == "country") {
                 for (const countries of data.countries) {
                 const country = document.createElement("div");
                 const countryName = document.createElement("h3");
@@ -21,7 +21,7 @@ function travelSearch(event) {
                 country.appendChild(countryName);
                 recommendationInfo.appendChild(country);
                 }
-            } else if (searchString == "temple" || searchString == "temples") {
+            } else if (searchString === "temple") {
                 for (const temples of data.temples) {
                 const temple = document.createElement("div");
                 const templeName = document.createElement("h3");
