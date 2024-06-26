@@ -6,6 +6,7 @@ function travelSearch(event) {
     console.log('Searching for ', searchString);
     const apiUrl = 'https://clarkm4705.github.io/GetAwayTravel/travel_recommendation_api.json';
     console.log(apiUrl);
+    clearSearch();
     fetch(apiUrl)
         .then(response => {
             return response.json();
